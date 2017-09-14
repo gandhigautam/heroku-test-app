@@ -8,14 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "none"
+    "url": "https://github.com/gandhigautam/heroku-test-app"
   },
+  "keywords": [
+    "node",
+    "heroku",
+    "express"
+  ],
   "author": "gautam",
   "license": "ISC",
   "dependencies": {
     "express": "^4.15.4"
   },
-
   "engines": {
     "node": "6.9.4"
   }
