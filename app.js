@@ -44,9 +44,14 @@ http.createServer(app, function (req, res) {
 });
 
 
-// app.get('/test', function (req, res) {
-//   res.send('Hello Gautam -I Really Love You so Much! why gautam?')
-// })
+app.get('/test', function (req, res) {
+  res.send('Hello Gautam -I Really Love You so Much! why gautam?')
+})
+
+app.get('/users', function (req, res) {
+  createWebpage(req, res);
+  res.send('test all users');
+})
 
 
 // Makes connection asynchronously.  Mongoose will queue up database
