@@ -1,5 +1,5 @@
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
 //
 // app.set('port', (process.env.PORT || 5000));
@@ -16,11 +16,9 @@ const app = express()
 
 
 // Preamble
-var http = require ('http');	     // For serving a basic web page.
-var mongoose = require ("mongoose"); // The reason for this demo.
+var http = require ('http');
+var mongoose = require ("mongoose");
 
-// Here we find an appropriate database to connect to, defaulting to
-// localhost if we don't find one.
 var uristring =
   'mongodb://gautamDb:Gandhi%4041@gautamclusterdb-shard-00-00-grtix.mongodb.net:27017,gautamclusterdb-shard-00-01-grtix.mongodb.net:27017,gautamclusterdb-shard-00-02-grtix.mongodb.net:27017/gautamDbTest?ssl=true&replicaSet=gautamClusterDb-shard-0&authSource=admin'
    || 'mongodb://localhost/HelloMongoose';
@@ -50,6 +48,7 @@ app.get('/test', function (req, res) {
 
 app.get('/users', function (req, res) {
   createWebpage(req, res);
+  res.send('test all users');
 })
 
 
