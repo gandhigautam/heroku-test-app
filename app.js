@@ -43,7 +43,6 @@ app.get('/test', function (req, res) {
 
 app.get('/users', function (req, res) {
   createWebpage(req, res);
-  res.send('test all users');
 })
 
 
