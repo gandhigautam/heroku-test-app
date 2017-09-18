@@ -26,14 +26,9 @@ var uristring =
 // The http server will listen to an appropriate port, or default to  port 5000.
 app.set('port', (process.env.PORT || 5000));
 
-// In case the browser connects before the database is connected, the
-// user will see this message.
 var found = ['DB Connection not yet established.  Try again later.  Check the console output for error messages if this persists.'];
 
-// Create a rudimentary http server.  (Note, a real web application
-// would use a complete web framework and router like express.js).
-// This is effectively the main interaction loop for the application.
-// As new http requests arrive, the callback function gets invoked.
+
 http.createServer(app, function (req, res) {
   res.writeHead(200, {'Content-Type': 'text/html'});
   createWebpage(req, res);
